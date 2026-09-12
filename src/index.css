@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  
+  --color-tactical-bg: #070a0f;
+  --color-tactical-surface: #0b0f17;
+  --color-tactical-panel: #111827;
+  --color-tactical-card: #161f30;
+  --color-tactical-card-hover: #1e293b;
+  --color-tactical-border: #1f2a3e;
+  --color-tactical-border-active: #28354d;
+  --color-tactical-cyan: #06b6d4;
+  --color-tactical-green: #10b981;
+  --color-tactical-amber: #f59e0b;
+  --color-tactical-red: #ef4444;
+}
+
+/* Custom scrollbar for tactical density */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2a3e;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #28354d;
+}
+
+/* Reticle & Radar scan pulse */
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: 150px 150px;
+}
